@@ -1,0 +1,5 @@
+{
+    "/rest/:a/:b": "/issues",
+    "/issues": "/issues",
+    "/total": "/total"
+}
