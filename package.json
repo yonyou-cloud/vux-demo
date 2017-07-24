@@ -44,6 +44,7 @@
     "vue-template-compiler": "^2.2.6",
     "vux-loader": "^1.0.68",
     "webpack": "^2.4.1",
+    "webpack-bundle-analyzer": "^2.8.3",
     "webpack-dev-server": "^2.4.2",
     "webpack-merge": "^4.1.0"
   }

@@ -1,8 +1,10 @@
 var webpack = require('webpack');
 var config = require("./base.js");
 var WebpackDevServer = require('webpack-dev-server');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
-config.entry.app.unshift("webpack-dev-server/client?http://localhost:8888/");
+config.plugins.push(new BundleAnalyzerPlugin())
+config.entry.app.unshift("webpack-dev-server/client?http://localhost:8888/")
 var compiler = webpack(config);
 
 var server = new WebpackDevServer(compiler, {
