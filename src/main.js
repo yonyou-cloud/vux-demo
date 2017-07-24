@@ -3,7 +3,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import store from './store/';
 import routes from './router/';
-// import axios from 'axios';
 import axios from './config/http';
 // import './asset/libs/flexible/flexible.debug';
 

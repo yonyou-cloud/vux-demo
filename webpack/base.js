@@ -63,15 +63,16 @@ module.exports = {
             {
                 test: /\.js$/,
                 include: APP_SRC,
+                exclude: /^node_modules$/,
                 use: [{
                     loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            ['es2015', {
-                                modules: false
-                            }]
-                        ]
-                    }
+                    // options: {
+                    //     presets: [
+                    //         ['es2015', {
+                    //             modules: false
+                    //         }]
+                    //     ]
+                    // },
                 }]
             },
         ]
@@ -100,9 +101,8 @@ module.exports = {
                 postcss: function () {
                     return [ autoprefixer({
                         browsers: [
-                            "> 1%",
-                            "last 2 versions",
-                            "not ie <= 8"
+                            'iOS >= 7',
+                            'Android >= 4.1'
                         ]
                     })];
                 },

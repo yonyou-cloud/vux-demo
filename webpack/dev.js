@@ -4,6 +4,15 @@ var WebpackDevServer = require('webpack-dev-server');
 
 config.entry.app.unshift("webpack-dev-server/client?http://localhost:8888/");
 var compiler = webpack(config);
+
+const vuxLoader = require('vux-loader')
+module.exports = vuxLoader.merge(compiler, {
+    options: {},
+    plugins: [{
+        name: 'vux-ui'
+    }]
+})
+
 var server = new WebpackDevServer(compiler, {
     quiet: false,
     stats: {
@@ -21,4 +30,4 @@ var server = new WebpackDevServer(compiler, {
     publicPath: 'http://localhost:8888/',
     contentBase: '../dist/', //默认情况下，webpack-dev-server会从项目的根目录提供文件，可以通过此选项设置文件的目录名
     historyApiFallback: true, //当设置为true时，访问所有服务器上不存在的文件，都会被重定向到/，也就是index.html文件
-}).listen(8080);
+}).listen(8888);

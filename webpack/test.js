@@ -1,10 +1,13 @@
-var path = require('path');
 var webpack = require('webpack');
-var merge = require('webpack-merge');
-var config = require("./base.js");
+var webpackConfig = require("./base.js");
 
-config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({minimize: true})
-);
+// module.exports = webpack(webpackConfig);
 
-module.exports = merge(config, {});
+
+const vuxLoader = require('vux-loader')
+module.exports = vuxLoader.merge(webpackConfig, {
+    options: {},
+    plugins: [{
+        name: 'vux-ui'
+    }]
+})
