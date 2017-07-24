@@ -1,5 +1,4 @@
-#esn#
-webpack + vue2 + vue-router + vuex
+#vux-demo#
 
 #运行步骤#
 1、npm install
