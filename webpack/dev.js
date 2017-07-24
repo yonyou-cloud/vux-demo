@@ -5,14 +5,6 @@ var WebpackDevServer = require('webpack-dev-server');
 config.entry.app.unshift("webpack-dev-server/client?http://localhost:8888/");
 var compiler = webpack(config);
 
-const vuxLoader = require('vux-loader')
-module.exports = vuxLoader.merge(compiler, {
-    options: {},
-    plugins: [{
-        name: 'vux-ui'
-    }]
-})
-
 var server = new WebpackDevServer(compiler, {
     quiet: false,
     stats: {

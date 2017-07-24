@@ -8,7 +8,7 @@ const APP_PATH = path.resolve(__dirname, '../');
 const APP_SRC = path.join(APP_PATH, '/src');
 const APP_DIST = path.join(APP_PATH, '/dist');
 
-module.exports = {
+var webpackConfig = {
     devtool: '#cheap-module-eval-source-map',
     entry: {
         app: [path.join(APP_SRC, "/main.js")],
@@ -34,7 +34,7 @@ module.exports = {
         extensions: ['.js', '.json', '.vue', '.scss', '.css']
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
@@ -94,7 +94,6 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             __ENV__: JSON.stringify(process.env.NODE_ENV),
-            // CONFIG: JSON.stringify(require(`${APP_SRC}/config/config.js`)),
         }),
         new webpack.LoaderOptionsPlugin({
             options: {
@@ -110,3 +109,6 @@ module.exports = {
         }),
     ],
 };
+
+const vuxLoader = require('vux-loader')
+module.exports = vuxLoader.merge(webpackConfig, { plugins: ['vux-ui'] })

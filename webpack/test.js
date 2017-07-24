@@ -1,13 +1,9 @@
 var webpack = require('webpack');
-var webpackConfig = require("./base.js");
+var merge = require('webpack-merge');
+var config = require("./base.js");
 
-// module.exports = webpack(webpackConfig);
+var webpackConfig = merge(config, {
+    devtool: false
+});
 
-
-const vuxLoader = require('vux-loader')
-module.exports = vuxLoader.merge(webpackConfig, {
-    options: {},
-    plugins: [{
-        name: 'vux-ui'
-    }]
-})
+module.exports = webpackConfig;
