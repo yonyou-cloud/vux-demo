@@ -14,6 +14,8 @@ type=error
 通过添加disabled属性可将按钮设置为不可用状态。
 
 二、调用方式：
+
+```html
 <app-button>默认按钮</app-button>
 <app-button disabled>disabled</app-button>
 <app-button type="primary">信息按钮</app-button>
@@ -24,3 +26,4 @@ type=error
 <app-button type="primary" shape="circle"></app-button>
 <app-button type="success" long>确认提交</app-button>
 <app-button type="error" long>确认删除</app-button>
+```

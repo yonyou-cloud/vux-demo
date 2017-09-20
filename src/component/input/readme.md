@@ -9,6 +9,9 @@ textarea文本域：type=textarea
 默认文字
 
 二、调用方式：
+
+```html
 <app-input type="text" v-model="value" placeholder="请输入..." style="width: 500px;"></app-input>
 <app-input type="textarea" v-model="value" placeholder="禁用的输入框" disabled></app-input>
 <app-input type="textarea" v-model="value" placeholder="请输入..." style="width: 500px;"></app-input>
+```
