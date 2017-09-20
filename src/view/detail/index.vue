@@ -16,13 +16,13 @@ h3{
 
 <script>
 export default {
-    data() {
-        return {
-            msg: 'detail'
-        }
-    },
-    mounted(){
-        //
+  data () {
+    return {
+      msg: 'detail'
     }
-};
+  },
+  mounted () {
+    //
+  }
+}
 </script>

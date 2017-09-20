@@ -13,9 +13,9 @@
 import {Group, Cell} from 'vux'
 
 export default {
-    components: {
-        Group,
-        Cell
-    }
+  components: {
+    Group,
+    Cell
+  }
 }
 </script>

@@ -49,15 +49,15 @@
 
 <script>
 export default {
-    props: {
-        title: {
-            default: '标题'
-        },
-    },
-    data(){
-        return {
+  props: {
+    title: {
+      default: '标题'
+    }
+  },
+  data () {
+    return {
 
-        }
-    },
-};
+    }
+  }
+}
 </script>

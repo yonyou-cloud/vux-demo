@@ -7,32 +7,32 @@
 
 <script>
 export default {
-    props: {
-        type: {
-            type: String,
-            default: 'text'
-        },
-        placeholder: {
-            type: String,
-            default: ''
-        },
-        value: {
-            type: String,
-            default: ''
-        },
-        disabled: {
-            type: Boolean,
-            default: false
-        }
+  props: {
+    type: {
+      type: String,
+      default: 'text'
     },
-    data(){
-        return {
-
-        }
+    placeholder: {
+      type: String,
+      default: ''
     },
-    mounted() {
-        console.log(this.value);
+    value: {
+      type: String,
+      default: ''
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
+  },
+  data () {
+    return {
+
+    }
+  },
+  mounted () {
+    console.log(this.value)
+  }
 }
 </script>
 

@@ -7,39 +7,39 @@
 <script>
 import cx from 'classnames'
 export default {
-    props: {
-        className: {
-            type: String,
-            default: 'app-button'
-        },
-        type: {
-            type: String,
-            default: ''
-        },
-        shape: {
-            type: String,
-            default: ''
-        },
-        long: {
-            type: Boolean,
-            default: false
-        },
-        disabled: {
-            type: Boolean,
-            default: false
-        },
-
+  props: {
+    className: {
+      type: String,
+      default: 'app-button'
     },
-    computed: {
-        classes() {
-            return cx({
-                [this.className]: !!this.className,
-                [`${this.className}-${this.type}`]: !!this.type,
-                [`${this.className}-long`]: !!this.long,
-                [`${this.className}-circle`]: !!this.shape,
-            })
-        }
+    type: {
+      type: String,
+      default: ''
+    },
+    shape: {
+      type: String,
+      default: ''
+    },
+    long: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
+
+  },
+  computed: {
+    classes () {
+      return cx({
+        [this.className]: !!this.className,
+        [`${this.className}-${this.type}`]: !!this.type,
+        [`${this.className}-long`]: !!this.long,
+        [`${this.className}-circle`]: !!this.shape
+      })
+    }
+  }
 }
 </script>
 
