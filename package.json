@@ -22,6 +22,7 @@
     "vux": "^2.4.0"
   },
   "devDependencies": {
+    "@yonyou-cloud/baseurl": "0.0.1",
     "@yonyou-cloud/eslint-config": "0.0.1",
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
