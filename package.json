@@ -7,7 +7,8 @@
     "dev": "cross-env NODE_ENV=development node ./webpack/dev.js",
     "test": "rm -rf dist && cross-env NODE_ENV=test webpack --config ./webpack/test.js",
     "prevProduction": "rm -rf dist && cross-env NODE_ENV=prevProduction webpack --config ./webpack/prevProduction.js",
-    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config ./webpack/build.js"
+    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config ./webpack/build.js",
+    "lint": "eslint --fix -c @yonyou-cloud/eslint-config src/**/*.{js,vue}"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "vux": "^2.4.0"
   },
   "devDependencies": {
+    "@yonyou-cloud/eslint-config": "0.0.1",
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
@@ -30,6 +32,7 @@
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "es6-promise": "^4.1.0",
+    "eslint": "^4.7.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.28.0",
