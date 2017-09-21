@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
+// const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const px2rem = require('postcss-px2rem')
@@ -94,18 +94,6 @@ var webpackConfig = {
     }),
     new webpack.DefinePlugin({
       __ENV__: JSON.stringify(process.env.NODE_ENV)
-    }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: function () {
-          return [ autoprefixer({
-            browsers: [
-              'iOS >= 7',
-              'Android >= 4.1'
-            ]
-          })]
-        }
-      }
     })
   ]
 }
