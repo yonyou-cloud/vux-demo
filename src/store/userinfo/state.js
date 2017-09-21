@@ -1,3 +1,3 @@
 module.exports = {
-    userinfo: {},
+  userinfo: {}
 }

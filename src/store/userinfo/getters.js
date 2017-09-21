@@ -1,9 +1,9 @@
 module.exports = {
-	getUserInfo(state) {
-		return state.userinfo;
-	},
+  getUserInfo (state) {
+    return state.userinfo
+  },
 
-	getToken(state) {
-		return state.userinfo && state.userinfo.token ? state.userinfo.token : '';
-	},
-};
+  getToken (state) {
+    return state.userinfo && state.userinfo.token ? state.userinfo.token : ''
+  }
+}
