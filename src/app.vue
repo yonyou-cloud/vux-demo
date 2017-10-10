@@ -1,21 +1,16 @@
 <style>
+h1{
+  text-align: center;
+  padding: 1rem 0;
+}
 </style>
 
 <template>
-<div>
-    <group>
-        <cell title="title" value="value"></cell>
-    </group>
-</div>
+  <div>
+      <h1>测试DEMO</h1>
+      <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import {Group, Cell} from 'vux'
-
-export default {
-  components: {
-    Group,
-    Cell
-  }
-}
 </script>

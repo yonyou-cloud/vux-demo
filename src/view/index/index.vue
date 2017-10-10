@@ -2,16 +2,25 @@
 </style>
 
 <template>
-<div>
-    aaa
-</div>
+  <div>
+    <group>
+      <cell title="title" value="value"></cell>
+      <checklist :options="commonList"></checklist>
+    </group>
+  </div>
 </template>
 
 <script>
-
+import { Group, Cell, Checklist } from 'vux'
 export default {
-  data () {
+  components: {
+    Group,
+    Cell,
+    Checklist
+  },
+  data(){
     return {
+      commonList: ['China', 'Japan', 'America'],
     }
   }
 }
