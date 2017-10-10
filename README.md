@@ -4,4 +4,4 @@
 
 1、npm install
 2、npm run dev
-3、浏览器访问：[http://localhost:8888](http://localhost:8888)
+3、浏览器访问：[http://localhost:9999](http://localhost:9999)

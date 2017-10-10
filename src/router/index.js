@@ -6,7 +6,6 @@ export default [
     children: [
       {
         path: '/',
-        meta: { auth: false },
         component: resolve => require(['../view/index'], resolve)
       },
       {
